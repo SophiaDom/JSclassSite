@@ -1,0 +1,83 @@
+body {
+    background-color: black;
+    font-family: 'Helvetica Neue Condensed', sans-serif;
+    font-weight: 900;
+    height: 100vh;
+    margin: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow:hidden;
+    position: relative;
+}
+
+.numbers{
+    position:absolute;
+    transition: transform 0.3s ease;
+    font-size:200px;
+}
+
+h1 {
+    color: white;
+    /* font-size: 2em; */
+    z-index: 3;
+    opacity: 80%;
+}
+
+h1:hover{
+    opacity:1;
+    transform:scale(1.4);
+}
+
+
+:root{
+    --scale-factor: 1;
+}
+
+h2 {
+    color: #fcd260;
+    opacity:60%;
+    margin: 0;
+    text-align: center;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width */
+    height: 25vh; /* Takes 25% of the viewport height */
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow text */
+    font-size: 5vw;
+    white-space: nowrap;
+    transform: scaleY(var(--scale-factor));
+}
+
+.background {
+    flex:1;
+}
+
+.one{
+    left: 20%;
+}
+.two{
+    bottom: 5%;
+    left: 30%;
+}
+.three{
+    bottom: 40%;
+    left: 80%;
+}
+
+.school{
+    --scale-factor:10;
+}
+
+@media (max-width: 725px) {
+    .school{
+        --scale-factor: 18;
+    }
+}
+@media (min-width: 1300px) {
+    .school{
+        --scale-factor: 10;
+    }
+}
